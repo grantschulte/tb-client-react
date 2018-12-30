@@ -1,0 +1,26 @@
+.siteWrapper {
+  background-color: var(--bg-primary);
+}
+
+.pageWrapper {
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bodyWrapper {
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.navLink {
+  color: #777;
+}
+
+.navLink.active {
+  font-weight: bold;
+  color: var(--link-secondary);
+}

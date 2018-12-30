@@ -1,14 +1,24 @@
+:root {
+  --bg-primary: white;
+  --bg-secondary: lightblue;
+  --bg-alt: #222222;
+  --text-primary: #222222;
+  --link-primary: lightblue;
+  --link-secondary: #222222;
+  --link-alt: white;
+}
+
+html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+a {
+  color: var(--link-primary);
+}
+
+.contentWrapper {
+  padding: 0 10px;
 }

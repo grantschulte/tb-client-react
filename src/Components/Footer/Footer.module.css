@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-alt);
+  height: 60px;
+}
+
+.wrapper a {
+  margin: 5px;
+}
+
