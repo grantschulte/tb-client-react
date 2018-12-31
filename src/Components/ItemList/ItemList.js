@@ -5,35 +5,40 @@ import ItemListCard from '../ItemListCard/ItemListCard';
 import styles from './ItemList.module.css';
 
 class ItemList extends Component {
-  componentDidMount() {
-    this.props.fetchItems();
+  constructor () {
+    super();
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick (id, url) {
-    this.props.setActiveItem(id);
+  componentDidMount() {
+    this.props.checkOrFetch('itemList');
+  }
+
+  handleClick (url) {
     this.props.history.push(url);
   }
 
   render () {
-    const { itemsList, match } = this.props;
+    const { itemList, match } = this.props;
 
-    const listItems = itemsList.data.map((item, i) => {
-      const detailUrl = `${match.path}/${item.id}`;
-      return (
-        <ItemListCard
-          item={item}
-          detailUrl={detailUrl}
-          handleClick={this.handleClick}
-          key={`item-${item.id}`}
-        />
-      );
-    });
+    const list = itemList.data
+      ? itemList.data.map(item => {
+          const detailUrl = `${match.path}/${item.id}`;
+          return (
+            <ItemListCard
+              item={item}
+              detailUrl={detailUrl}
+              handleClick={this.handleClick}
+              key={`item-${item.id}`}
+            />
+          );
+        })
+      : <div>Loading...</div>;
 
     return (
       <PageBody>
         <div className={styles.cardsWrapper}>
-          { listItems }
+          { list }
         </div>
       </PageBody>
     );

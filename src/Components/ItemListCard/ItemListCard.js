@@ -7,7 +7,7 @@ function ItemListCard (props) {
   return (
     <div
       className={styles.card}
-      onClick={() => handleClick(item.id, detailUrl)}>
+      onClick={() => handleClick(detailUrl)}>
       <h3>{ item.common_name }</h3>
       <p>{ item.short_description }</p>
       <span className={styles.colorBox} style={{ backgroundColor: item.color }}></span>

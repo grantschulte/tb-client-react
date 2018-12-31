@@ -1,27 +1,17 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import axios from 'axios';
-import * as itemsActions from '../actions/items.actions';
+import * as itemActions from '../actions/itemList.actions';
 import ItemList from '../components/ItemList/ItemList';
 
-const mapStateToProps = state => ({
-  itemsList: state.itemsList
+const mapState = state => ({
+  itemList: state.itemList
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchItems: () => {
-    dispatch(itemsActions.fetchItems());
-
-    axios
-      .get(`${process.env.PUBLIC_URL}/json/fixture.json`)
-      .then(data => dispatch(itemsActions.fetchItemsSuccess(data)))
-      .catch(error => dispatch(itemsActions.fetchItemsFailure(error)));
-  },
-
-  setActiveItem: id => dispatch(itemsActions.setActiveItem(id))
-});
+const mapDispatch = {
+  ...itemActions
+};
 
 export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapState,
+  mapDispatch
 )(ItemList));
