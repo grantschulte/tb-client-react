@@ -6,7 +6,7 @@ import styles from './PageNav.module.css';
 function PageNav (props) {
   return (
     <ul className={styles.list}>
-      {menus.pageBody.map((item, i) => (
+      {menus.ContentContainer.map((item, i) => (
         <li
           key={`page-nav-list-item-${i}`}
           className={styles.listItem}>
@@ -19,7 +19,7 @@ function PageNav (props) {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 export default PageNav;

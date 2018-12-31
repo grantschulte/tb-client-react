@@ -1,9 +1,9 @@
 import React from 'react';
-import PageBody from '../PageBody/PageBody';
+import ContentContainer from '../ContentContainer/ContentContainer';
 
 function About () {
   return (
-    <PageBody>
+    <ContentContainer className='mv2'>
       <h1>About</h1>
       <p>Nunc vehicula leo at hendrerit sodales. Suspendisse vel consectetur 
         elit. Vestibulum efficitur scelerisque blandit. Duis feugiat metus quis 
@@ -16,7 +16,7 @@ function About () {
         Proin faucibus, libero vel pellentesque placerat, augue augue 
         scelerisque mi, et mattis justo nibh scelerisque lectus. Vivamus 
         iaculis felis nec velit efficitur, ac porta dolor consectetur.</p>
-    </PageBody>
+    </ContentContainer>
   );
 }
 

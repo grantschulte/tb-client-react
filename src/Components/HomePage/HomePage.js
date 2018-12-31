@@ -1,9 +1,9 @@
 import React from 'react';
-import PageBody from '../PageBody/PageBody';
+import ContentContainer from '../ContentContainer/ContentContainer';
 
 function Home () {
   return (
-    <PageBody>
+    <ContentContainer className='mv2'>
       <h1>Welcome</h1>
       <p>Pellentesque eu lacus eu odio imperdiet dapibus vitae mattis lectus.
         Fusce non aliquam nisi. Nulla at ex sit amet erat pulvinar ornare eget a 
@@ -12,7 +12,7 @@ function Home () {
         condimentum nisl. Aliquam tempus id lacus ac interdum. Cras eget 
         ullamcorper justo, vel eleifend massa. Praesent pharetra sem vel tellus 
         consequat, et lacinia nulla scelerisque.</p>
-    </PageBody>
+    </ContentContainer>
   );
 }
 

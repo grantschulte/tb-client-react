@@ -1,16 +1,7 @@
 .wrapper {
-  display: flex;
-  align-items: center;
   height: 60px;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--bg-secondary);
-}
-
-.logoLink {
-  font-weight: bold;
-  color: var(--link-secondary);
-  text-decoration: none;
-  font-size: 18px;
 }
 
 .logoLink img {

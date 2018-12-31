@@ -10,11 +10,12 @@ function Footer (props) {
     <footer className={styles.wrapper}>
       {sorted.map((item, i) => (
         <Link
+          className='mv1 mh2'
           key={`footer-nav-${i}`}
           to={item.path}>{item.label}</Link>
       ))}
     </footer>
-  )
+  );
 }
 
 export default Footer;

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import ContentContainer from './ContentContainer/ContentContainer';
 import NotFoundPage from './NotFoundPage/NotFoundPage';
 import PageNav from './PageNav/PageNav';
 import routes from '../config/routes.config';
@@ -17,7 +18,7 @@ class App extends Component {
             <Header></Header>
 
             <div className='bodyWrapper'>
-              <div className='contentWrapper'>
+              <ContentContainer className='mh2'>
                 <PageNav></PageNav>
 
                 <Switch>
@@ -30,7 +31,7 @@ class App extends Component {
                   ))}
                   <Route component={ NotFoundPage } />
                 </Switch>
-              </div>
+              </ContentContainer>
             </div>
 
             <Footer></Footer>

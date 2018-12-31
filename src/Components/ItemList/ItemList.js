@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import PageBody from '../PageBody/PageBody';
 
+import ContentContainer from '../ContentContainer/ContentContainer';
 import ItemListCard from '../ItemListCard/ItemListCard';
+import { Loader } from 'semantic-ui-react';
 import styles from './ItemList.module.css';
 
 class ItemList extends Component {
@@ -33,14 +34,15 @@ class ItemList extends Component {
             />
           );
         })
-      : <div>Loading...</div>;
+      : <Loader size='huge' active />;
 
     return (
-      <PageBody>
-        <div className={styles.cardsWrapper}>
+      <ContentContainer className='mv2'>
+        <div className='flex flex-column'>
+          <h1>Items</h1>
           { list }
         </div>
-      </PageBody>
+      </ContentContainer>
     );
   }
 }

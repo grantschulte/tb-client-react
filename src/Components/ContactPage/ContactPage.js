@@ -1,9 +1,9 @@
 import React from 'react';
-import PageBody from '../PageBody/PageBody';
+import ContentContainer from '../ContentContainer/ContentContainer';
 
 function ContactPage () {
   return (
-    <PageBody>
+    <ContentContainer className='mv2'>
       <h1>Contact Us</h1>
       <p>Nunc vehicula leo at hendrerit sodales. Suspendisse vel consectetur 
         elit. Vestibulum efficitur scelerisque blandit. Duis feugiat metus quis 
@@ -12,11 +12,11 @@ function ContactPage () {
         sollicitudin quam vitae tristique. Donec tortor metus, pellentesque 
         dignissim commodo vitae, commodo id urna. Maecenas tempus nunc vitae 
         ligula mollis dictum. Sed eget tortor lacus. Orci varius natoque 
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        pen\atibus et magnis dis parturient montes, nascetur ridiculus mus. 
         Proin faucibus, libero vel pellentesque placerat, augue augue 
         scelerisque mi, et mattis justo nibh scelerisque lectus. Vivamus 
         iaculis felis nec velit efficitur, ac porta dolor consectetur.</p>
-    </PageBody>
+    </ContentContainer>
   );
 }
 

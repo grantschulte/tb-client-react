@@ -1,11 +1,11 @@
 import React from 'react';
-import PageBody from '../PageBody/PageBody';
+import ContentContainer from '../ContentContainer/ContentContainer';
 
 function NotFoundPage () {
   return (
-    <PageBody>
+    <ContentContainer>
       <h1>Not Found</h1>
-    </PageBody>
+    </ContentContainer>
   );
 }
 
