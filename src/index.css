@@ -1,22 +1,44 @@
 :root {
   --bg-primary: white;
-  --bg-secondary: lightblue;
+  --bg-secondary: white;
   --bg-alt: #222222;
+  --border-color: #DDDDDD;
+  --font-family: Arial, Helvetica, sans-serif;
   --text-primary: #222222;
-  --link-primary: lightblue;
-  --link-secondary: #222222;
+  --link-primary: #2461CE;
+  --link-secondary: #2461CE;
   --link-alt: white;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family);
+  font-weight: normal;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
 }
 
 a {
   color: var(--link-primary);
+}
+
+a img {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 .contentWrapper {

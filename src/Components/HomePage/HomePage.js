@@ -13,7 +13,7 @@ function Home () {
         ullamcorper justo, vel eleifend massa. Praesent pharetra sem vel tellus 
         consequat, et lacinia nulla scelerisque.</p>
     </PageBody>
-  )
+  );
 }
 
 export default Home;

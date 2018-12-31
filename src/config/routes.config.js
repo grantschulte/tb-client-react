@@ -1,7 +1,8 @@
-import Home from '../Components/Home/Home';
-import About from '../Components/About/About';
-import ItemDetail from '../Components/ItemDetail/ItemDetail';
-import ItemList from '../Components/ItemList/ItemList';
+import HomePage from '../components/HomePage/HomePage';
+import AboutPage from '../components/AboutPage/AboutPage';
+import ContactPage from '../components/ContactPage/ContactPage';
+import ItemDetailContainer from '../containers/ItemDetailContainer';
+import ItemListContainer from '../containers/ItemListContainer';
 
 export default [
   {
@@ -9,9 +10,22 @@ export default [
     path: "/about",
     exact: true,
     components: {
-      main: About
+      main: AboutPage
     },
     label: "About",
+    showOnPageNav: false,
+    showOnFooterNav: true,
+    showOnMobileNav: true,
+    order: 2
+  },
+  {
+    name: "contact",
+    path: "/contact",
+    exact: true,
+    components: {
+      main: ContactPage
+    },
+    label: "Contact",
     showOnPageNav: false,
     showOnFooterNav: true,
     showOnMobileNav: true,
@@ -22,7 +36,7 @@ export default [
     path: "/",
     exact: true,
     components: {
-      main: Home
+      main: HomePage
     }, 
     label: "Home",
     showOnPageNav: true,
@@ -35,7 +49,7 @@ export default [
     path: "/items",
     exact: true,
     components: {
-      main: ItemList
+      main: ItemListContainer
     },
     label: "Items",
     showOnPageNav: true,
@@ -48,7 +62,7 @@ export default [
     path: "/items/:id",
     exact: false,
     components: {
-      main: ItemDetail
+      main: ItemDetailContainer
     }, 
     label: "Item Detail",
     showOnPageNav: false,

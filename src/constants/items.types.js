@@ -1,0 +1,6 @@
+// Items
+export const FETCH_ITEMS = "FETCH_ITEMS";
+export const FETCH_ITEMS_FAILURE = "FETCH_ITEMS_FAILURE";
+export const FETCH_ITEMS_SUCCESS = "FETCH_ITEMS_SUCCESS";
+export const SET_ACTIVE_ITEM = "SET_ACTIVE_ITEM";
+export const TOGGLE_ITEM = "TOGGLE_ITEM";

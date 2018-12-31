@@ -1,23 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import PageBody from '../PageBody/PageBody';
 
-function ItemList (props) {
-  const items = [1, 2, 3].map((item, i) => {
-    return (
-      <li key={`item-${i}`}>
-        <Link to={`${props.match.path}/${item}`}>Item { item }</Link>
-      </li>
-    )
-  });
+import ItemListCard from '../ItemListCard/ItemListCard';
+import styles from './ItemList.module.css';
 
-  return (
-    <PageBody>
-      <ul>
-        { items }
-      </ul>
-    </PageBody>
-  )
+class ItemList extends Component {
+  componentDidMount() {
+    this.props.fetchItems();
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick (id, url) {
+    this.props.setActiveItem(id);
+    this.props.history.push(url);
+  }
+
+  render () {
+    const { itemsList, match } = this.props;
+
+    const listItems = itemsList.data.map((item, i) => {
+      const detailUrl = `${match.path}/${item.id}`;
+      return (
+        <ItemListCard
+          item={item}
+          detailUrl={detailUrl}
+          handleClick={this.handleClick}
+          key={`item-${item.id}`}
+        />
+      );
+    });
+
+    return (
+      <PageBody>
+        <div className={styles.cardsWrapper}>
+          { listItems }
+        </div>
+      </PageBody>
+    );
+  }
 }
 
 export default ItemList;

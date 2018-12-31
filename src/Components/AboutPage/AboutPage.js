@@ -17,7 +17,7 @@ function About () {
         scelerisque mi, et mattis justo nibh scelerisque lectus. Vivamus 
         iaculis felis nec velit efficitur, ac porta dolor consectetur.</p>
     </PageBody>
-  )
+  );
 }
 
 export default About;
