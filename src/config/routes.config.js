@@ -60,7 +60,7 @@ export default [
   {
     name: "itemDetail",
     path: "/items/:id",
-    exact: false,
+    exact: true,
     components: {
       main: ItemDetailContainer
     }, 

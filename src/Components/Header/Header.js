@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Header.module.css'
+import styles from './Header.module.css';
 
 function Header (props) {
   return (
@@ -10,7 +10,7 @@ function Header (props) {
         </a>
       </div>
     </div>
-  )
+  );
 }
 
 export default Header;
