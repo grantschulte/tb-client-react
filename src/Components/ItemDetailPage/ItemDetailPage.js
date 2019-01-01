@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Loader } from 'semantic-ui-react';
-import ContentContainer from '../ContentContainer/ContentContainer';
-import styles from './ItemDetail.module.css';
+import Page from '../Page/Page';
+import styles from './ItemDetailPage.module.css';
 import { cssString } from '../../utils/css.utils';
 
 class ItemDetail extends Component {
@@ -14,8 +14,8 @@ class ItemDetail extends Component {
   render () {
     const { item } = this.props;
 
-    return (
-      <ContentContainer className='mv2'>
+    const content = (
+      <React.Fragment>
         {item &&
           <div>
             <h1 className='mb2'>{ item.common_name }</h1>
@@ -31,8 +31,10 @@ class ItemDetail extends Component {
         }
 
         {!item && <Loader size='huge' active />}
-      </ContentContainer>
+      </React.Fragment>
     );
+
+    return <Page content={content} />;
   }
 }
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as itemActions from '../actions/itemList.actions';
-import ItemDetail from '../components/ItemDetail/ItemDetail';
+import ItemDetailPage from '../components/ItemDetailPage/ItemDetailPage';
 
 const mapStateToProps = (state, ownProps) => {
   const allItems = state.itemList.data;
@@ -18,4 +18,4 @@ const mapDispatchToProps = {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(ItemDetail));
+)(ItemDetailPage));

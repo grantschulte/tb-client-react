@@ -1,9 +1,9 @@
 import React from 'react';
-import ContentContainer from '../ContentContainer/ContentContainer';
+import Page from '../Page/Page';
 
 function ContactPage () {
-  return (
-    <ContentContainer className='mv2'>
+  const content = (
+    <React.Fragment>
       <h1>Contact Us</h1>
       <p>Nunc vehicula leo at hendrerit sodales. Suspendisse vel consectetur 
         elit. Vestibulum efficitur scelerisque blandit. Duis feugiat metus quis 
@@ -16,8 +16,10 @@ function ContactPage () {
         Proin faucibus, libero vel pellentesque placerat, augue augue 
         scelerisque mi, et mattis justo nibh scelerisque lectus. Vivamus 
         iaculis felis nec velit efficitur, ac porta dolor consectetur.</p>
-    </ContentContainer>
+    </React.Fragment>
   );
+
+  return <Page content={content} />;
 }
 
 export default ContactPage;

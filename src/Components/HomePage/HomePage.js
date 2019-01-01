@@ -1,9 +1,9 @@
 import React from 'react';
-import ContentContainer from '../ContentContainer/ContentContainer';
+import Page from '../Page/Page';
 
-function Home () {
-  return (
-    <ContentContainer className='mv2'>
+function HomePage () {
+  const content = (
+    <React.Fragment>
       <h1>Welcome</h1>
       <p>Pellentesque eu lacus eu odio imperdiet dapibus vitae mattis lectus.
         Fusce non aliquam nisi. Nulla at ex sit amet erat pulvinar ornare eget a 
@@ -12,8 +12,10 @@ function Home () {
         condimentum nisl. Aliquam tempus id lacus ac interdum. Cras eget 
         ullamcorper justo, vel eleifend massa. Praesent pharetra sem vel tellus 
         consequat, et lacinia nulla scelerisque.</p>
-    </ContentContainer>
+    </React.Fragment>
   );
+
+  return <Page content={content} />;
 }
 
-export default Home;
+export default HomePage;

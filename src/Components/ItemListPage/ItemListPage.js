@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Loader } from 'semantic-ui-react';
-import ContentContainer from '../ContentContainer/ContentContainer';
+import Page from '../Page/Page';
 import ItemListCard from '../ItemListCard/ItemListCard';
-
 
 class ItemList extends Component {
   constructor () {
@@ -37,14 +36,14 @@ class ItemList extends Component {
         })
       : <Loader size='huge' active />;
 
-    return (
-      <ContentContainer className='mv2'>
-        <div className='flex flex-column'>
-          <h1>Items</h1>
-          { list }
-        </div>
-      </ContentContainer>
+    const content = (
+      <div className='flex flex-column'>
+        <h1>Items</h1>
+        <div>{ list }</div>
+      </div>
     );
+
+    return <Page content={content} />;
   }
 }
 

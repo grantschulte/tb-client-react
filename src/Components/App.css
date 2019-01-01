@@ -3,14 +3,12 @@
 }
 
 .pageWrapper {
-  background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 .bodyWrapper {
-  background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
   flex: 1;
