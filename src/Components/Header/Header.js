@@ -3,7 +3,7 @@ import React from 'react';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import styles from './Header.module.css';
 
-function Header (props) {
+function Header () {
   return (
     <div className={styles.wrapper}>
       <ContentContainer className='mh2 flex items-center h-100'>

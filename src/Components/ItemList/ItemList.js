@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
+import { Loader } from 'semantic-ui-react';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import ItemListCard from '../ItemListCard/ItemListCard';
-import { Loader } from 'semantic-ui-react';
-import styles from './ItemList.module.css';
+
 
 class ItemList extends Component {
   constructor () {
@@ -46,5 +47,12 @@ class ItemList extends Component {
     );
   }
 }
+
+ItemList.propTypes = {
+  checkOrFetch: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  itemList: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired
+};
 
 export default ItemList;

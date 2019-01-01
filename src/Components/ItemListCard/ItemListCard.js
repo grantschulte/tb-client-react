@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './ItemListCard.module.css';
 
 function ItemListCard (props) {
@@ -15,5 +16,11 @@ function ItemListCard (props) {
     </div>
   );
 }
+
+ItemListCard.propTypes = {
+  detailUrl: PropTypes.string,
+  handleClick: PropTypes.func,
+  item: PropTypes.object
+};
 
 export default ItemListCard;

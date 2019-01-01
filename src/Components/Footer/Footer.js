@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { menus } from '../../config/menus.config';
 import styles from './Footer.module.css';
 
-function Footer (props) {
+function Footer () {
   let sorted = [...menus.footer].sort((a, b) => a.order - b.order);
 
   return (

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { menus } from '../../config/menus.config';
 import styles from './PageNav.module.css';
 
-function PageNav (props) {
+function PageNav () {
   return (
     <ul className={styles.list}>
       {menus.ContentContainer.map((item, i) => (

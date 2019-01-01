@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ContentContainer.module.css';
+import PropTypes from 'prop-types';
 
 function ContentContainer (props) {
   return (
@@ -8,5 +8,10 @@ function ContentContainer (props) {
     </div>
   );
 }
+
+ContentContainer.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired
+};
 
 export default ContentContainer;
