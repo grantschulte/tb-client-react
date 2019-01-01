@@ -1,10 +1,11 @@
 import React from 'react';
+import { Header } from 'semantic-ui-react';
 import Page from '../Page/Page';
 
 function ContactPage () {
   const content = (
     <React.Fragment>
-      <h1>Contact Us</h1>
+      <Header as='h1'>Contact Us</Header>
       <p>Nunc vehicula leo at hendrerit sodales. Suspendisse vel consectetur 
         elit. Vestibulum efficitur scelerisque blandit. Duis feugiat metus quis 
         malesuada malesuada. Mauris dictum convallis est id fringilla. Curabitur 

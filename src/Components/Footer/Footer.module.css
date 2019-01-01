@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-alt);
   height: 60px;
+  background-color: var(--bg-alt);
 }
 
-.wrapper a {
+.wrapper a,
+.wrapper a:active,
+.wrapper a:visited {
   color: var(--link-alt);
 }
-

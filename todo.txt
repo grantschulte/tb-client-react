@@ -1,11 +1,8 @@
-UI Kit Variables
----
-Cards
 Typography & Fonts
-Mobile Menu
+Cards
 Buttons
 Forms
 Modal
-Toast
+Mobile Menu
 ---
 README

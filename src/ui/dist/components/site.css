@@ -13,6 +13,7 @@
              Page
 *******************************/
 
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700,400italic,700italic&subset=latin');
 html,
 body {
   height: 100%;
@@ -26,7 +27,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'Helvetica', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
@@ -43,7 +44,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Helvetica', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.28571429em;
   margin: calc(2rem -  0.14285714em ) 0em 1rem;
   font-weight: bold;
@@ -51,7 +52,7 @@ h5 {
 }
 h1 {
   min-height: 1rem;
-  font-size: 2.25em;
+  font-size: 2rem;
 }
 h2 {
   font-size: 1.71428571rem;
@@ -105,8 +106,8 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #2461CE;
-  text-decoration: underline;
+  color: #0a4dc4;
+  text-decoration: none;
 }
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Loader } from 'semantic-ui-react';
+import { Header, Loader } from 'semantic-ui-react';
 import Page from '../Page/Page';
 import ItemListCard from '../ItemListCard/ItemListCard';
 
@@ -38,7 +38,7 @@ class ItemList extends Component {
 
     const content = (
       <div className='flex flex-column'>
-        <h1>Items</h1>
+        <Header as='h1'>Items</Header>
         <div>{ list }</div>
       </div>
     );

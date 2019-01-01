@@ -1,17 +1,19 @@
 import React from 'react';
-
-import ContentContainer from '../ContentContainer/ContentContainer';
+import { Image } from 'semantic-ui-react';
+import Container from '../Container/Container';
+import { cssString } from '../../utils/css.utils';
 import styles from './Header.module.css';
 
 function Header () {
   return (
-    <div className={styles.wrapper}>
-      <ContentContainer className='mh3 flex items-center h-100'>
-        <a href='/' className={styles.logoLink}>
-          <img src='/tacklebox-logo.png' alt='Tacklebox' />
-        </a>
-      </ContentContainer>
-    </div>
+    <Container
+      className={cssString(styles.wrapper, 'flex items-center ph3')}>
+      <Image
+        href='/'
+        src='/tacklebox-logo.png'
+        alt='Tacklebox'
+        size='small' />
+    </Container>
   );
 }
 

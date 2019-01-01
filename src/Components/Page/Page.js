@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContentContainer from '../ContentContainer/ContentContainer';
+import Container from '../Container/Container';
 import ScrollToTopOnMount from '../ScrollToTopOnMount';
 
 function Page (props) {
-  const { topNav, content } = props;
+  const { topBar, content } = props;
 
   return (
-    <ContentContainer className='pa3'>
+    <Container className='ph3 pv4'>
       <ScrollToTopOnMount />
-      { topNav && <div>{ topNav }</div> }
+      { topBar &&
+        <div className='mb3'>{ topBar }</div>
+      }
+
       { content && <div>{ content }</div> }
-    </ContentContainer>
+    </Container>
   );
 }
 

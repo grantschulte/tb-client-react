@@ -1045,7 +1045,7 @@ a.ui.basic.black.label:hover {
 
 .ui.basic.label {
   background: none #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1055,9 +1055,9 @@ a.ui.basic.black.label:hover {
 a.ui.basic.label:hover {
   text-decoration: none;
   background: none #FFFFFF;
-  color: #2461CE;
-  -webkit-box-shadow: 1px solid rgba(0, 0, 0, 0.13);
-          box-shadow: 1px solid rgba(0, 0, 0, 0.13);
+  color: #0a4dc4;
+  -webkit-box-shadow: 1px solid rgba(34, 36, 38, 0.15);
+          box-shadow: 1px solid rgba(34, 36, 38, 0.15);
   -webkit-box-shadow: none;
           box-shadow: none;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import { Loader } from 'semantic-ui-react';
+import { Icon, Loader } from 'semantic-ui-react';
 import Page from '../Page/Page';
 import styles from './ItemDetailPage.module.css';
 import { cssString } from '../../utils/css.utils';
@@ -12,7 +11,7 @@ class ItemDetail extends Component {
   }
 
   render () {
-    const { item } = this.props;
+    const { item, history } = this.props;
 
     const content = (
       <React.Fragment>
@@ -34,7 +33,16 @@ class ItemDetail extends Component {
       </React.Fragment>
     );
 
-    return <Page content={content} />;
+    const topBar = (
+      <span onClick={() => history.goBack()}>
+        <Icon link name='arrow left' />
+        All Items
+      </span>
+    );
+
+    return <Page
+      topBar={topBar}
+      content={content} />;
   }
 }
 

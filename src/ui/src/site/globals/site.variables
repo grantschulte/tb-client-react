@@ -2,46 +2,83 @@
      User Global Variables
 *******************************/
 
-// @pageMinWidth  : 1049px;
-// @pageOverflowX : visible;
+// Fonts
 
-@emSize: 14px;
+@fontName : 'Rubik';
+@importGoogleFonts : true;
+
+// Base Sizes
+
+@emSize   : 14px;
 @fontSize : 14px;
-@fontName : 'Helvetica';
-@importGoogleFonts : false;
 
-@h1: 2.25em;
 
-@defaultBorderRadius: 0.2307em;
+// Border Radius
 
-@disabledOpacity: 0.3;
+// Brand Colors
 
-/* Colors */
+@primaryColor: @blue;
+@secondaryColor: @black;
+
+// Page Heading
+
+// Form Input
+
+// Focused Input
+
+// Sizes
+
+// Page
+
+// Paragraph
+
+// Links
+
+@linkColor: @primaryColor;
+
+// Scroll Bars
+
+// Highlighted Text
+
+// Loader
+
+// Grid
+
+// Transitions
+
+// Break Points
+
+// Site Colors
+
 @blue: #2461CE;
 @red: #BB0A21;
 @grey: #777777;
 @black: #252627;
-@primaryColor: @blue;
-@secondaryColor: @black;
 
-/* Links */
-@linkColor: @primaryColor;
-@linkHoverColor: @linkColor;
-@linkHoverUnderline: underline;
+// Alpha Colors
 
-/* Borders */
-@borderColor: rgba(0, 0, 0, 0.13);
-@solidBorderColor: #D3D4D9;
-@internalBorderColor: rgba(0, 0, 0, 0.06);
-@selectedBorderColor: @primaryColor;
+// Accents
 
-/* Breakpoints */
-@largeMonitorBreakpoint: 1049px;
-@computerBreakpoint: @largeMonitorBreakpoint;
-@tabletBreakpoint: @largeMonitorBreakpoint;
+// Emotive Colors
 
-@infoBackgroundColor: @white;
+// Paths
 
-@infoTextColor: #4E575B;
-@warningTextColor: @orange;
-@errorTextColor: @red;
+// Em Sizes
+
+// Icons
+
+// Neutral Text
+
+// Borders
+
+// Derived Values
+
+// Exact Pixel Values
+
+// States
+
+// Focus
+
+// Down (:active)
+
+// Active
