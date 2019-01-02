@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Card } from 'semantic-ui-react';
 
-import { Header, Loader } from 'semantic-ui-react';
+import { Header, Image, Loader } from 'semantic-ui-react';
 import Page from '../Page/Page';
 import ItemListCard from '../ItemListCard/ItemListCard';
 
@@ -22,16 +23,21 @@ class ItemList extends Component {
   render () {
     const { itemList, match } = this.props;
 
-    const list = itemList.data
+    const cards = itemList.data
       ? itemList.data.map(item => {
           const detailUrl = `${match.path}/${item.id}`;
           return (
-            <ItemListCard
-              item={item}
-              detailUrl={detailUrl}
-              handleClick={this.handleClick}
+            <Card
               key={`item-${item.id}`}
-            />
+              onClick={() => this.handleClick(detailUrl)}
+              fluid
+            >
+              <Card.Content>
+                <Card.Header>{item.common_name}</Card.Header>
+                <Card.Meta>{item.long_name}</Card.Meta>
+                <Card.Description>{item.short_description}</Card.Description>
+              </Card.Content>
+            </Card>
           );
         })
       : <Loader size='huge' active />;
@@ -39,7 +45,7 @@ class ItemList extends Component {
     const content = (
       <div className='flex flex-column'>
         <Header as='h1'>Items</Header>
-        <div>{ list }</div>
+        <div>{ cards }</div>
       </div>
     );
 

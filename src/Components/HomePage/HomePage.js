@@ -1,18 +1,22 @@
 import React from 'react';
-import { Header } from 'semantic-ui-react';
+import { Button, Header, Image } from 'semantic-ui-react';
 import Page from '../Page/Page';
 
-function HomePage () {
+function HomePage (props) {
+  const onClick = () => props.history.push('/items');
+
   const content = (
     <React.Fragment>
       <Header as='h1'>Welcome</Header>
-      <p>Pellentesque eu lacus eu odio imperdiet dapibus vitae mattis lectus.
-        Fusce non aliquam nisi. Nulla at ex sit amet erat pulvinar ornare eget a 
-        leo. Sed lobortis molestie auctor. Proin consectetur rutrum scelerisque. 
-        Etiam sed magna congue, varius mi luctus, hendrerit nulla. Duis non 
-        condimentum nisl. Aliquam tempus id lacus ac interdum. Cras eget 
-        ullamcorper justo, vel eleifend massa. Praesent pharetra sem vel tellus 
-        consequat, et lacinia nulla scelerisque.</p>
+      <p>Nunc vehicula leo at hendrerit sodales. Suspendisse vel consectetur 
+        elit. Vestibulum efficitur scelerisque blandit. Duis feugiat metus quis 
+        malesuada malesuada. Mauris dictum convallis est id fringilla. Curabitur 
+        bibendum mattis congue. Phasellus at interdum ipsum.</p>
+      <Button
+        primary
+        fluid
+        size='large'
+        onClick={onClick}>View Items</Button>
     </React.Fragment>
   );
 
