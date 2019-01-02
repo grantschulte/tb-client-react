@@ -4,7 +4,7 @@
 
 // Fonts
 
-@fontName : 'Rubik';
+@fontName : 'Montserrat';
 @importGoogleFonts : true;
 
 // Base Sizes
