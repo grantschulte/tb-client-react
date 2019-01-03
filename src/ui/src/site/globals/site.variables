@@ -4,8 +4,11 @@
 
 // Fonts
 
-@fontName : 'Montserrat';
+@fontName : 'Roboto';
 @importGoogleFonts : true;
+// @headerFont        : 'Anton', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+// @pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+// @googleFontRequest : '@{googleFontName}:@{googleFontSizes}|Anton:400,700&subset=@{googleSubset}';
 
 // Base Sizes
 

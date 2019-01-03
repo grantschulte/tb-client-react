@@ -1,0 +1,39 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--blue);
+  z-index: 1;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.list {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.list li {
+  margin: 1em;
+  text-align: center;
+}
+
+.link {
+  display: block;
+  color: white;
+  font-size: 3em;
+  line-height: 1;
+}

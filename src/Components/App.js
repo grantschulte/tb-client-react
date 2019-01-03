@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from './Header/Header';
+import HeaderContainer from '../containers/HeaderContainer';
 import Footer from './Footer/Footer';
 import NotFoundPage from './NotFoundPage/NotFoundPage';
 import routes from '../config/routes.config';
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div className='siteWrapper'>
-          <Header></Header>
+          <HeaderContainer></HeaderContainer>
 
           <div className='pageWrapper'>
             <Switch>

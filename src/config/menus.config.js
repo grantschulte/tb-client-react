@@ -1,8 +1,9 @@
 import routesConfig from './routes.config';
 
 export const menus = {
-  footer:   routesConfig.filter(item => item.showOnFooterNav),
-  ContentContainer: routesConfig.filter(item => item.showOnPageNav)
+  footer:  routesConfig.filter(item => item.showOnFooterNav),
+  mobile:  routesConfig.filter(item => item.showOnMobileNav),
+  pageNav: routesConfig.filter(item => item.showOnPageNav)
 };
 
 // This is an alternate way of constructing the menus that doesn't rely

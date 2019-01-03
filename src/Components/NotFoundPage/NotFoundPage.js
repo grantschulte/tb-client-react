@@ -1,12 +1,8 @@
 import React from 'react';
-import ContentContainer from '../ContentContainer/ContentContainer';
+import Page from '../Page/Page';
 
 function NotFoundPage () {
-  return (
-    <ContentContainer>
-      <h1>Not Found</h1>
-    </ContentContainer>
-  );
+  return <Page content={<h1>Not Found</h1>} />;
 }
 
 export default NotFoundPage;

@@ -1,3 +1,33 @@
+
+# Tacklebox Client
+
+This is a starter client for bootstrapping MVP-like applications. This project uses Create React App and is augmented with several other libraries and tools. Here is a rundown:
+
+- Create React App
+- Redux
+- React Router
+- Axios
+- Moment
+- Lodash
+- Semantic UI
+- Tachyons Layout Modules   
+
+In addition to these tools there are basic layout components and an application structure. Redux has been set up to work with React Router for state management and there is a working Async integration example.
+
+## Updating Semantic UI Theme
+
+Semantic UI uses theme variables that need to be compiled by the Semantic
+build process. To update the Semantic UI theme run `gulp watch` from the semantic
+ui root folder.
+
+```
+cd src/ui/src
+gulp watch // or
+gulp build
+```
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
