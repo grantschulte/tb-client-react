@@ -18,7 +18,7 @@ class App extends Component {
             <Switch>
               {routes.map((route, i) => (
                 <Route
-                key={`app-route-${i}`}
+                key={route.name}
                 exact={route.exact}
                 path={route.path}
                 component={route.components.main} />

@@ -27,7 +27,7 @@ class ItemList extends Component {
           const detailUrl = `${match.path}/${item.id}`;
           return (
             <Card
-              key={`item-${item.id}`}
+              key={item.id}
               onClick={() => this.handleClick(detailUrl)}
               fluid
             >

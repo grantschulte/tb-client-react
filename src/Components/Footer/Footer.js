@@ -13,7 +13,7 @@ function Footer () {
         {sorted.map((item, i) => (
           <Link
             className='mv1 mh2'
-            key={`footer-nav-${i}`}
+            key={item.name}
             to={item.path}>{item.label}</Link>
         ))}
       </Container>

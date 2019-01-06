@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { Provider as ReduxProvider } from 'react-redux';
 
 import store from './store';
 import App from './components/App';
@@ -8,8 +8,8 @@ import App from './components/App';
 import './styles';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <ReduxProvider store={store}>
     <App />
-  </Provider>,
+  </ReduxProvider>,
   document.getElementById('root')
 );

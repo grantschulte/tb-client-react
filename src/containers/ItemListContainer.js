@@ -1,3 +1,4 @@
+import { flowRight } from 'lodash';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as itemActions from '../actions/itemList.actions';
@@ -11,7 +12,11 @@ const mapDispatch = {
   ...itemActions
 };
 
-export default withRouter(connect(
-  mapState,
-  mapDispatch
-)(ItemListPage));
+export const connectItemList = connect(mapState, mapDispatch);
+
+const wrappers = [
+  withRouter,
+  connectItemList
+];
+
+export default flowRight(wrappers)(ItemListPage);

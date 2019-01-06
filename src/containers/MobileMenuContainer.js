@@ -1,3 +1,4 @@
+import { flowRight } from 'lodash';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as mobileMenuActions from '../actions/mobileMenu.actions';
@@ -11,7 +12,11 @@ const mapDispatch = {
   ...mobileMenuActions
 };
 
-export default withRouter(connect(
-  mapState,
-  mapDispatch
-)(MobileMenu));
+export const connectMobileMenu = connect(mapState, mapDispatch);
+
+const wrappers = [
+  withRouter,
+  connectMobileMenu
+];
+
+export default flowRight(wrappers)(MobileMenu);

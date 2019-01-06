@@ -14,7 +14,7 @@ function MobileMenu (props) {
           {sorted.map((item, i) => {
             return (
               <li
-                key={`mobile-menu-item-${i}`}
+                key={item.name}
                 className='reset'>
                 <Link
                   className={styles.link}

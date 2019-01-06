@@ -8,11 +8,10 @@ function PageNav () {
     <ul className={styles.list}>
       {menus.ContentContainer.map((item, i) => (
         <li
-          key={`page-nav-list-item-${i}`}
+          key={item.name}
           className={styles.listItem}>
           <NavLink
             className='navLink'
-            key={`app-nav-link-${i}`}
             exact={item.exact}
             to={item.path}>{item.label}
           </NavLink>
