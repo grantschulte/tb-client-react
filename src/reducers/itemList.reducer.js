@@ -7,7 +7,6 @@ import {
 const initState = {
   loading: false,
   status: undefined,
-  success: undefined,
   error: undefined,
   data: undefined
 };
@@ -31,7 +30,8 @@ function itemList (state = initState, action) {
       return Object.assign({}, state, {
         loading: false,
         status: 'error',
-        error: action.error.message
+        error: action.error.message,
+        data: action.response.data
       });
 
     default:

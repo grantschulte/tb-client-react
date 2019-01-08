@@ -3,7 +3,7 @@ import { Form, Input, Button } from 'semantic-ui-react';
 import topicOptions from './topic-options';
 
 function ContactForm (props) {
-  const { onChange, onSubmit, formState } = props;
+  const { onChange, onSubmit, formState, submitting } = props;
 
   return (
     <Form onSubmit={onSubmit}>
@@ -78,7 +78,7 @@ function ContactForm (props) {
         primary
         fluid
         size='large'
-        loading={formState.submitting}
+        loading={submitting}
       />
     </Form>
   );

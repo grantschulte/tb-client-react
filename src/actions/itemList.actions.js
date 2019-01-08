@@ -1,7 +1,7 @@
 import * as types from '../constants/itemList.types';
 import axios from 'axios';
 
-export function requestItems (data) {
+export function requestItems () {
   return {
     type: types.FETCH_ITEMS
   };
@@ -28,7 +28,7 @@ export function fetchItems () {
     dispatch(requestItems());
 
     axios
-      .get(`${process.env.PUBLIC_URL}/json/fixture.json`)
+      .get(`${process.env.PUBLIC_URL}/json/items.fixture.json`)
       .then(data => dispatch(requestItemsSuccess(data)))
       .catch(error => dispatch(requestItemsFailure(error)));
   };

@@ -1,6 +1,6 @@
 import HomePage from '../components/HomePage/HomePage';
 import AboutPage from '../components/AboutPage/AboutPage';
-import ContactPage from '../components/ContactPage/ContactPage';
+import ContactPageContainer from '../containers/ContactPageContainer';
 import ItemDetailContainer from '../containers/ItemDetailContainer';
 import ItemListContainer from '../containers/ItemListContainer';
 
@@ -23,7 +23,7 @@ export default [
     path: "/contact",
     exact: true,
     components: {
-      main: ContactPage
+      main: ContactPageContainer
     },
     label: "Contact",
     showOnPageNav: false,

@@ -5,20 +5,17 @@ import ContactForm from '../ContactForm/ContactForm';
 import withFormState from '../../hocs/form';
 const Form = withFormState(ContactForm);
 
-function ContactPage () {
+function ContactPage (props) {
   const onSubmit = (state) => {
-    // Dispatch side effect form submission
-    // props.submitContactForm();
-    
-    console.log('Form State', state);
-
-    return { status: 200 };
+    props.makeContactFormRequest(state);
   };
 
   const content = (
     <Fragment>
       <Header as='h1'>Contact Us</Header>
-      <Form onSubmit={onSubmit} />
+      <Form
+        submitting={props.contactForm.submitting}
+        onSubmit={onSubmit} />
     </Fragment>
   );
 

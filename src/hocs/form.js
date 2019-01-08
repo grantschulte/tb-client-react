@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function withFormState (WrappedComponent) {
-  return class FormContainer extends React.Component {
+  class FormContainer extends React.Component {
     constructor () {
       super();
       this.state = {
@@ -12,21 +13,8 @@ function withFormState (WrappedComponent) {
     }
 
     handleSubmit (e) {
-      this.setState({
-        submitting: true
-      });
-
-      setTimeout(() => {
-        const data = this.props.onSubmit(this.state);
-
-        if (data.status === 200) {
-          this.setState({
-            submitting: false,
-            fields: {}
-          });
-        }
-      }, 2000);
-      
+      console.log('Submitting...', this.state.fields);
+      this.props.onSubmit(this.state.fields);
       e.preventDefault();
     }
 
@@ -52,6 +40,12 @@ function withFormState (WrappedComponent) {
       );
     }
   };
+
+  FormContainer.propTypes = {
+    WrappedComponent: PropTypes.element
+  };
+
+  return FormContainer;
 }
 
 export default withFormState;
